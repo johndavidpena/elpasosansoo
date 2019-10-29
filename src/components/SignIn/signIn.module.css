@@ -1,0 +1,51 @@
+.signIn {
+  margin-top: 2rem;
+}
+
+.signIn p {
+  max-width: 500px;
+  margin: 1rem auto;
+}
+/* If the width is 550px or LESS */
+@media only screen and (max-width: 550px) {
+  .signIn p {
+    max-width: 400px !important;
+  }
+}
+
+.signIn span {
+  font-weight: 700;
+  color: var(--red-400);
+}
+
+.passSign {
+  text-align: center;
+}
+
+.passSign p {
+  margin: 0 auto;
+}
+
+.google,
+.facebook {
+  margin: 0.5rem auto;
+}
+
+.google img {
+  width: 190px;
+}
+
+.facebook img {
+  width: 185px;
+}
+
+.google img,
+.facebook img {
+  cursor: pointer;
+  transition: 0.25s ease-in-out;
+}
+
+.google img:hover,
+.facebook img:hover {
+  transform: scale(1.05);
+}

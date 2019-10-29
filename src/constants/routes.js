@@ -1,0 +1,11 @@
+export const LANDING = '/';
+export const SIGN_UP = '/signup';
+export const SIGN_IN = '/signin';
+export const HOME = '/home';
+export const ACCOUNT = '/account';
+export const PASSWORD_FORGET = '/pw-forget';
+export const WHITE = '/white';
+export const YELLOW = '/yellow';
+export const GREEN = '/green';
+export const BROWN = '/brown';
+export const BLACK = '/black';

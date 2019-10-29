@@ -1,0 +1,51 @@
+.belts {
+  margin: 1rem 0;
+}
+
+.belts div {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 1rem auto;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
+}
+
+.belts img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.white {
+  background-image: url(../../assets/white-waves.png);
+}
+.yellow {
+  background-color: var(--yellow-400);
+}
+.green {
+  background-color: var(--green-500);
+}
+.brown {
+  background-color: #8A7363;
+}
+.black {
+  background-color: var(--grey-900);
+}
+.black span {
+  color: var(--off-white) !important;
+}
+
+.belts span {
+  text-transform: uppercase;
+  color: var(--text-dark);
+  font-weight: 700;
+  font-size: var(--font-smaller);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}

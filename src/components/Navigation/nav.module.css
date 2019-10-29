@@ -1,0 +1,38 @@
+.nav {
+  height: 55px;
+  line-height: 55px;
+  margin-top: 5px;
+  margin-bottom: 1rem;
+}
+
+/* If the width is 750px or LESS */
+@media only screen and (max-width: 750px) {
+  .nav {
+    height: 35px;
+    line-height: 35px;
+    margin-top: 5px;
+    margin-bottom: 0;
+  }
+}
+
+.nav ul {
+  list-style-type: none;
+
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav a {
+  color: var(--text-normal);
+}
+
+.nav img {
+  height: 55px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 750px) {
+  .nav img {
+    height: 35px;
+  }
+}
