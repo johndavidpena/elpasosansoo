@@ -1,6 +1,6 @@
 import React from 'react';
 import navStyles from './nav.module.css';
-import logo from '../../assets/logo.webp';
+import logo from '../../assets/logo.png';
 import { Link } from 'react-router-dom';
 import SignOutButton from '../SignOut';
 import * as ROUTES from '../../constants/routes';
