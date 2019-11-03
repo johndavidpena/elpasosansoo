@@ -1,5 +1,5 @@
 import React from 'react';
-import mainStyles from '../../main.css';
+import emailStyles from './emailVer.module.css';
 import AuthUserContext from './context';
 import { withFirebase } from '../Firebase';
 
@@ -41,7 +41,7 @@ const withEmailVerification = Component => {
                   )
                 }
                 <button
-                  type="button" onClick={this.onSendEmailVerification} disabled={this.state.isSent} className={mainStyles.button}
+                  type="button" onClick={this.onSendEmailVerification} disabled={this.state.isSent} className={emailStyles.button}
                 >
                   Send confirmation email
                 </button>
