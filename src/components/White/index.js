@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSpring, animated } from 'react-spring';
-import { withAuthorization } from '../Session';
+import { withAuthorization, withEmailVerification } from '../Session';
+import { compose } from 'recompose';
 
 const White = () => {
   const fade = useSpring({ config: { duration: 950 }, from: { opacity: 0 }, opacity: 1 });
@@ -62,4 +63,7 @@ const White = () => {
 
 const condition = authUser => !!authUser;
 
-export default withAuthorization(condition)(White);
+export default compose(
+  withEmailVerification,
+  withAuthorization(condition),
+)(White);

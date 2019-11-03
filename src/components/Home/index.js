@@ -3,7 +3,8 @@ import homeStyles from './home.module.css';
 import { useSpring, animated } from 'react-spring';
 import { Link } from 'react-router-dom';
 import * as ROUTES from '../../constants/routes';
-import { withAuthorization } from '../Session';
+import { withAuthorization, withEmailVerification } from '../Session';
+import { compose } from 'recompose';
 
 const HomePage = () => {
   const fade = useSpring({ config: { duration: 950 }, from: { opacity: 0 }, opacity: 1 });
@@ -46,4 +47,7 @@ const HomePage = () => {
 
 const condition = authUser => !!authUser;
 
-export default withAuthorization(condition)(HomePage);
+export default compose(
+  withEmailVerification,
+  withAuthorization(condition),
+)(HomePage);

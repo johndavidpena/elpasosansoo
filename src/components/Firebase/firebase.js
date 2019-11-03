@@ -30,6 +30,11 @@ class Firebase {
 
   doSignOut = () => this.auth.signOut();
 
+  doSendEmailVerification = () =>
+    this.auth.currentUser.sendEmailVerification({
+      url: process.env.REACT_APP_CONFIRMATION_EMAIL_REDIRECT,
+    });
+
   doPasswordReset = email => this.auth.sendPasswordResetEmail(email);
 
   doPasswordUpdate = password =>
@@ -47,6 +52,8 @@ class Firebase {
             authUser = {
               uid: authUser.uid,
               email: authUser.email,
+              emailVerified: authUser.emailVerified,
+              providerData: authUser.providerData,
               ...dbUser,
             };
 

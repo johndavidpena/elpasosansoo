@@ -1,7 +1,8 @@
 import React from 'react';
 import { useSpring, animated } from 'react-spring';
-import { AuthUserContext, withAuthorization } from '../Session';
+import { AuthUserContext, withAuthorization, withEmailVerification } from '../Session';
 import PasswordChangeForm from '../PasswordChange';
+import { compose } from 'recompose';
 
 const AccountPage = () => {
   const fade = useSpring({ config: { duration: 950 }, from: { opacity: 0 }, opacity: 1 });
@@ -20,4 +21,7 @@ const AccountPage = () => {
 
 const condition = authUser => !!authUser;
 
-export default withAuthorization(condition)(AccountPage);
+export default compose(
+  withEmailVerification,
+  withAuthorization(condition),
+)(AccountPage);
