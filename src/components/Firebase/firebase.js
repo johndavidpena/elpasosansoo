@@ -41,6 +41,7 @@ class Firebase {
     this.auth.currentUser.updatePassword(password);
 
   // *** Merge Auth and DB User API *** //
+  // FIX: emailVerified and providerData not saved to DB
   onAuthUserListener = (next, fallback) =>
     this.auth.onAuthStateChanged(authUser => {
       if (authUser) {

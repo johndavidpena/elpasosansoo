@@ -1,7 +1,7 @@
 import React from 'react';
 import bruce from '../../assets/bruceLeeActionFigure.jpg';
-import jimmy from '../../assets/jimmyWoo.jpg';
-import paul from '../../assets/paul.jpg';
+// import jimmy from '../../assets/jimmyWoo.jpg';
+// import paul from '../../assets/paul.jpg';
 import { useSpring, animated } from 'react-spring';
 
 const Landing = () => {
